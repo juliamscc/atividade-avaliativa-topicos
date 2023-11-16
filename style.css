@@ -1,0 +1,130 @@
+:root {
+    --color-dark-blue: #142140;
+    --color-aubergine: #4D0032;
+    --color-pink: #FF66AB;
+    --color-beige: #EFDCD3;
+    --color-orange: #a6434f;
+}
+
+body {
+    height: 100vh;
+    font-family: sans-serif;
+    background-image: linear-gradient(var(--color-aubergine) , var(--color-dark-blue), var(--color-orange));
+    margin: 0;
+}
+
+div {
+    text-align: center;
+}
+
+p {
+    color: var(--color-beige);
+}
+
+button {
+    color: var(--color-aubergine);
+    background-color: var(--color-beige);
+    font-weight: 600;
+    border-radius: 50px;
+    height: 40px;
+    width: 100%;
+    margin: 4px auto;
+}
+
+button:hover {
+    background-color: var(--color-pink);
+}
+
+.content {
+    padding: 1em;
+}
+
+.info {
+    margin: 0;
+    padding-top: 80px;
+}
+
+.name{
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.description {
+    font-size: 0.7em;
+    margin-top: 5px;
+}
+
+.links {
+    padding: 10px;
+}
+
+.perfil {
+    width: 30%;
+    border-radius: 500px;
+}
+
+.icon {
+    width: 5%;
+    margin: 2px;
+}
+
+.img {
+    width: 80%;
+}
+
+@media (min-width: 900px) {
+    body {
+        background-image: linear-gradient(var(--color-dark-blue), var(--color-dark-blue));
+        display: grid;
+        grid-template-areas: 
+        'perfil content'
+        'image content';
+    }
+
+    button {
+        margin: 7px auto;
+        height: 50px;
+        font-size: large;
+    }
+
+    .info {
+        background-color: var(--color-aubergine);
+        grid-area: perfil;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .image {
+        background-image: linear-gradient(var(--color-aubergine), var(--color-orange));
+        grid-area: image;
+    }
+
+    .content {
+        padding: 0;
+        grid-area: content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .perfil {
+        width: 
+        40%;
+    }
+
+    .links {
+        width: 90%;
+    }
+
+    .name{
+        font-size: 2em;
+    }
+    
+    .description {
+        font-size: 1em;
+    }
+}
